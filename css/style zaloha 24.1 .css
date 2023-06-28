@@ -1,0 +1,350 @@
+:root{
+    --barva1: #909090;
+    --barva2: #F3E8EE;
+    --barva3: #21FA90;
+    --barva4: #21897E;
+    --barva5: #EEE;
+    --barva6: #000;
+    --pozadi: #003049;
+
+    --a-base: #FFFFFF;
+    --a-hover: #FF0000;
+    --a-active: #00FF00;
+
+    --combat-height: 300px;
+
+    --combat-team1-color-hlavni : #00008B;
+    --combat-team1-color-doplnek : #ADD8E6;
+    --combat-team1-color-interakce : #87CEFA;
+    --combat-team2-color-hlavni : #8B0000;
+    --combat-team2-color-doplnek : #FF6347;
+    --combat-team2-color-interakce : #FF4500;
+}
+
+*{box-sizing: border-box;font-family: "SansSerif", "Times New Roman";}
+html,body{height: 100%;margin: 0;padding: 0;}
+body{display: flex; flex-direction: column; min-width: 420px; min-height: 480px;}
+
+/* HEADER */
+.header{width: 100%;min-height: 10%;background-color: #CCC;color:white;text-align: center;}
+.header-botwrap{width: 100%;height: 100%;display: flex;}
+.menu-nav{width: 10%;height: 100%; background-color: #000;color:white;font-size: 160%; display: flex; justify-content: space-evenly; align-items: center;cursor: pointer;}
+.menu-wrap{display: flex; flex-direction: row; justify-content: space-evenly;max-width: 100%;width: 100%; height: 100%;overflow:hidden;}
+.menu-content{width: 25%; height: 100%; background-color: #606060;color: white;display: flex;justify-content: center;align-items: center; font-size: 140%;
+    cursor: pointer;flex-grow: 1;border:0;}
+button:hover{background-color: #CCC; color:black;}
+
+.menu-content a{display: flex;justify-content: center;align-items: center;flex-grow: 1;height: 100%;color:var(--a-base);text-decoration: none;}
+.menu-content a:hover{color:var(--a-hover);}
+.menu-content a:active{color:var(--a-active);}
+/* Index */
+.nadpis-stranky{text-align: center; font-size: 30px; font-weight: bold;}
+
+/* Login */
+.login {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+.login-label{font-size: 20px;}
+.login label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login  input[type="text"], .login  input[type="password"] {
+    width: 60%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.login  input[type="submit"] {
+    width: 60%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login  input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.login select{
+    width: 60%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+
+/* Main */
+.menu-content-wrap{min-height: 90%; max-height: 90%;overflow-x: hidden;}
+
+.main-action-wrap{display: flex; flex-direction: row;}
+.main-paragraph{font-size: 28px;font-weight: bold; display: flex;flex-direction: column; align-items: center;}
+.main-action{display: flex; flex-direction: column; align-items: center; max-width: 256px; max-height: 290px; margin: 0 auto; padding: 24px;}
+.main-action img{height:256px; width:256px;}
+.fight-tooltip-text{}
+
+/* ADMIN */
+.admin-main{display: flex;flex-direction: column; flex-grow: 1; justify-content: center;}
+.admin-table{width: 80%;}
+.admin-tr{justify-content: center;}
+.admin-th{}
+.admin-object-icon{width: 64px;height: 64px;border-radius: 24px;}
+.admin-paragraph{margin: 0 auto; text-align: center; padding: 4px; font-weight: bold; font-size: 24px;}
+
+.admin-edit-character-general-wrap{display: flex; flex-direction: column; justify-content: center;}
+.admin-edit-general-table{margin-left: auto;margin-right: auto;}
+.admin-edit-character-icon{display: flex; margin: 0 auto; text-align: center; justify-content: center; padding: 24px; border-radius: 60px; width: 256px; height: 256px;}
+.admin-edit-character-name{ justify-content: center; text-align: center; font-weight: bold; font-size: 36px;}
+.admin-edit-character-stats-title{text-align: center;font-weight: bold; font-size: 28px;}
+.admin-edit-character-stats-wrap{display: flex; justify-content: center;}
+.admin-edit-characters-name-wrap{display: flex;flex-direction: row; margin: 0 auto;}
+.admin-edit-characters-name{display: inline-block;text-align: center; margin: 0 auto; margin-right: 2%; font-weight: bold; font-size: 22px;}
+
+.admin-general-main{margin:0 auto; text-align: center;}
+.admin-general-figure{display: inline-block;}
+.admin-general-races{}
+.admin-general-delete{text-decoration: none; color: red;}
+.admin-general-icon{height: 128px;width: 128px;}
+
+.admin-item-wrap{display: flex;flex-direction: column; justify-content: center; margin: 0 auto; text-align: center; width: 100%;}
+.admin-item-name{}
+.admin-item-image{height: 124px;width: 124px;margin: 0 auto;margin-top: 4px;}
+
+/* About */
+.about{margin: 0 auto;}
+
+/* Profile */
+.profile-menu{width: 100%;height: 10%;display: flex;justify-content: space-evenly;}
+.profile-menu-link{flex-grow: 1;}
+.profile-menu a{display: flex;justify-content: center;align-items: center;flex-grow: 1;height: 100%;color:#000;text-decoration: none;font-size: 24px;}
+.profile-menu a:hover{color:var(--a-hover);}
+.profile-menu a:active{color:var(--a-active);}
+
+/* CHARACTER */
+.character-wrap{display: flex;flex-direction: row;width: 60%;height: 80%;justify-content: center;margin: 0 auto; padding: 2%;}
+.character-prvnicast{width: 100%;}
+.character-druhacast{width: 100%;display: flex;flex-direction: column;flex-grow: 1;min-width: 260px;}
+.character-treticast{width: 100%;}
+.character-wrap a{height: 128px; width: 128px;}
+
+.character-item-box{display: flex;max-height: calc(100%/4);width: auto; flex-direction: row;margin: 0 auto;}
+.character-profile-icon{height: auto;width: 30%; text-align: center;border-radius:100px;margin: 0 auto;}
+.character-profile-name{margin: 0 auto;text-align: center;font-size: 28px;font-weight: bold;}
+.character-profile-race{margin: 0 auto;text-align: center;font-size: 26px;}
+.character-profile-level{margin: 0 auto;text-align: center;font-size: 32px;}
+.character-profile-experience{margin: 0 auto;text-align: center;font-size: 26px;}
+
+.character-item-box-weapons{width: 50%;height: auto;padding: 16px;}
+.character-druhacast-weapons{height: 25%;width: 100%;overflow: hidden;flex-grow: 1;}
+
+/* Character STATS */
+.character-stats-wrap{display: flex;flex-direction: column;width: 80%;justify-content: left;font-size: 32px;text-align: center;}
+
+/* SHOP */
+.main-tavern{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.tavern-playeritems {background-color: #9b7653; display: grid;width: 50%;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+}
+.tavern-shopitems {background-color: #708090;width: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width: 1260px) {
+    .tavern-playeritems {background-color: #9b7653; display: grid;width: 50%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tavern-shopitems {background-color: #708090;width: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.item-container .item-icon{width: 64px;height: 64px;}
+.item-container {
+    padding: 20px;
+    width: 100%;
+    max-height: 180px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px auto auto;
+    grid-row: auto;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid black;
+    align-items: center;
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+}
+
+.item-name {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    font-weight: bold;
+    margin: 0;
+}
+
+.item-value {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    color: #F7D358;
+    margin: 0;
+}
+.obal-obrazek-cena{position: relative;}
+.item-count {
+    position: absolute;
+    padding: 2px 5px;
+    font-size: 18px;
+    color: #000;
+}
+
+
+
+/* Inventory */
+.profile-inventory-wrap{display: flex;flex-direction: row;justify-content: center; justify-items:left;flex-wrap: wrap;width: 100%;margin: 10px;}
+.profile-inventory-item-wrap{width: 156px;height: 156px;margin: 1%;position: relative;}
+.profile-inventory-item-count{position: absolute; top: 5px; left: 10px; background-color: white;color:black;font-size: 28px;border: 1px solid black;}
+.profile-inventory-item{width: 156px;height: 156px;margin: 1%;cursor: pointer;transition: 0.5s ease;}
+.profile-inventory-item:hover{box-shadow: 0 0 5px 10px rgba(0,0,0,0.75);transform: scale(1.2); transition: 0.5s ease;}
+
+
+/* Inventory Modal */
+.modal{min-width:50%;text-align: center;}
+.modal::backdrop{ background: linear-gradient(45deg, #00FFFF, #0000FF); opacity: .3;}
+.modal-top{display: flex; flex-direction: row;}
+.modal-top-icon{width: 25%; height: auto;}
+.modal-top-right{margin: 0 auto;}
+.item-name{font-size: 32px; font-weight: bold;}
+.item-cost{font-size: 28px; color: rgb(150,150,0);}
+.modal-description{font-size: 24px;padding:12px;}
+.modal-description-stats{font-size: 24px;}
+.modal-actions{display: flex;flex-direction: row;justify-content: space-evenly;}
+.modal-actions-left{display: flex;justify-content: left;}
+.modal-actions-right{display: flex;flex-direction: column; justify-content: right;}
+.modal-actions-icons{width: 128px;height: 128px;}
+.modal-actions-arrow{width: 128px;height: 128px;text-align: center;font-size: 48px;}
+.modal-close button{font-size:28px;padding: 4px;}
+.modal-actions-interact{}
+.modal-equip-button{}
+
+/* Spellbook */
+.spellbook-spellslots-wrap{display: flex;flex-direction: row;justify-content: space-evenly;padding: 28px;}
+.spellbook-spells-wrap{display: flex;flex-direction: row;padding: 28px;background-color: #ccc; justify-content: center; overflow: auto;flex-wrap: wrap;}
+.spellbook-spellslot{width: 156px;height: 156px}
+
+.spellbook-spell-wrap{}
+.spellbook-spell-icon{width: 156px;height: 156px;cursor:pointer;}
+
+.spellbook-spell-proklik{text-decoration: none;color:#000;}
+.spellbook-spell-proklik:visited{color:#000;}
+
+/* Spellbook modal */
+.spell-name{font-size: 32px; font-weight: bold;}
+
+/* Interact */
+.profile-interact-wrap{}
+.profile-interact{display: flex;flex-direction: row;justify-content: space-evenly;padding: 28px;}
+.interact-icon{width: 156px;height: 156px;cursor:pointer;}
+.interact-paragraph{margin: 0 auto;font-size: 34px; font-weight: bold;text-align: center;}
+
+/* Combat kartička responsive, OLD */
+.combat-karticka-obal{display: inline-block;}
+.combat-wrap-top{height: var(--combat-height);width: calc(var(--combat-height) * 0.8);background-color: #CCC; display: flex; flex-direction: column; outline: 1px solid black; margin: 0 auto; margin-top: 50px;}
+.combat-wrap-bot{height: var(--combat-height);width: calc(var(--combat-height) * 0.8);background-color: #CCC; display: flex; flex-direction: column; outline: 1px solid black; margin: 0 auto; margin-top: 50px;}
+.combat-top{height: 50%;width: 100%;display: flex; flex-direction: column; justify-content: center;}
+.combat-player-name{width: 100%; height: 14px; text-align: center;margin: 0 auto; font-size: 114%; flex-grow: 1;}
+.combat-player-image{height: 64%;width: auto; margin:0 auto; border-radius: 24px; flex-grow: 1; margin-top: 5%;}
+.combat-healtbar{width: 80%; background-color: black;height: 6%; margin: 0 auto;}
+.combat-bar{background-color: red;width: 100%;height: 100%;position: relative;}
+.combat-bot{width: 100%; height: 50%; display: flex; flex-direction: column;}
+.combat-bot-upper-actions{display: flex; flex-direction: row;  justify-content: space-evenly; margin:4px; height: 35%;}
+.combat-player-action{height: 64%;width: auto; cursor: pointer;}
+.combat-bot-spells{display: flex; flex-direction: row;  justify-content: space-evenly; height: 35%;}
+.combat-bot-effects{display: flex; flex-direction: row;  justify-content: left; align-items: center; height: 22%; outline: 1px solid black;flex-grow: 1;}
+.combat-effect{height: 77%; width: auto;margin: 1%;}
+
+ /*COMBAT INTERFACE OLD*/
+.combat-interface-wrap{display: flex;width: 100%; height: 100%; flex-direction: column;}
+.combat-interface-top{display: flex;flex-direction: row; justify-content: space-evenly;height: 50%;}
+.combat-interface-bot{display: flex;flex-direction: row; justify-content: space-evenly;height: 50%;}
+.combat-log{display: flex;flex-direction: column; justify-content: center; background-color: #21FA90; text-align: center;}
+
+/* Combat kartička NEW */
+
+
+/* COMBAT INTERFACE NEW */
+.game-field{width: 100%;height: 100%;margin: 0;padding: 0;box-sizing: border-box;}
+.combat-top-section{width: 100%;height: 50%;position: absolute;top: 0; background-color: var(--a-base); display: flex; flex-direction: row;justify-content: space-evenly;}
+.combat-bot-section{width: 100%;height: 50%;position: absolute;bottom: 0; background-color: var(--a-base); display: flex; flex-direction: row; justify-content: space-evenly;}
+
+/* COMBAT FIGHT FUNKCE */
+.highlight { border: 3px solid red;
+    animation: pulse 1s infinite, color-cycle 1s infinite;
+    transform: scale(1);
+    transition: transform .2s;}
+.highlight:hover{animation: pulse 1s infinite, color-cycle2 .5s infinite;
+    transform: scale(1.05);}
+@keyframes color-cycle {
+    0% { border-color: #000000;}
+    50% { border-color: #FF0000;}
+    100% { border-color: #000000;}
+}
+@keyframes color-cycle2 {
+    0% { border-color: #0000FF;transform: scale(1);}
+    50% { border-color: #0000FF;transform: scale(1);}
+    100% { border-color: #0000FF;transform: scale(1);}
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.disabled{opacity: 0.5;pointer-events: none;cursor: not-allowed;}
+.hidden{visibility: hidden; display: none;}
+.effect{opacity: 0.8;}
+.effect:hover{opacity: 1;}
+
+/* FOOTER */
+.footer{
+width: 100%;min-height: 80px;height:10%;background-color: #CCC;color: white;display: flex;flex-direction: row;justify-content: center;margin:0 auto;
+}
+.footer-link{
+    display: flex;justify-content: center;align-items: center; font-size: 140%;flex-grow: 1;color:black;text-decoration: none;cursor: pointer;
+}
+.footer-link:hover{background-color: #606060;color:white;}
+
+.footer-link a{display: flex;justify-content: center;align-items: center;flex-grow: 1;height: 100%;color:black;text-decoration: none;}
+.footer-link a:hover{color:var(--a-hover);}
+.footer-link a:active{color:var(--a-active);}
+
+

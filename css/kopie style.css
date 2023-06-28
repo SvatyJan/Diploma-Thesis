@@ -1,0 +1,215 @@
+:root{
+    --barva1: #003049;
+    --barva2: #F3E8EE;
+    --barva3: #21FA90;
+    --barva4: #21897E;
+}
+
+*{box-sizing: border-box;}
+html,body{height: 100%;margin: 0;padding: 0;}
+body{display: flex; flex-direction: column;}
+
+/* HLAVICKA  */
+
+.header{display:flex; flex-direction: row;
+    background-color: var(--barva1); color: var(--barva2);
+    align-items: center; text-align: center;padding: 6px;}
+.nadpis{display: inline-block;}
+.menu{display: flex; flex-direction: row; justify-content: space-evenly;
+    flex-wrap: wrap; flex-grow: 1;}
+.menu-link{ color: var(--barva3);flex-basis: 20%;text-decoration: none;outline:1px solid var(--barva2);padding: 6px;}
+.menu-link:hover{ color: var(--barva4);}
+.login{display: flex; flex-direction: column; background-color: var(--barva1);
+    outline: 1px solid var(--barva3); color: var(--barva2);
+    height: 100%;margin: 0;flex-basis: 20%; padding-right: 6px; padding-left: 6px;}
+.login-nadpis{text-align: center; font-size: 18px;font-weight: bold;color:var(--barva2);margin-bottom: 6px;margin-top: 6px;}
+.login-input{margin-bottom: 6px;width: 60%;}
+.login-input:focus{outline:none;}
+.login-label{color:var(--barva2); flex-grow: 1;text-align: center;}
+.login-link{text-decoration: none; color:var(--barva3);}
+.hlavicka-obal{display: flex; flex-direction: column;flex-basis: 70%;
+    height: 100%; justify-content: space-evenly;flex-grow: 1;}
+.display-flex-row{display: flex; flex-direction: row;}
+.login-imput.submit{width: 60%;}
+
+
+/* HLAVNI CAST */
+.main{display:flex;flex-direction: column; flex-grow: 1; background-color: #FFF;}
+
+.uvodnitext{display: inline-block;}
+
+
+.profile{flex-direction: row;width: 100%;}
+.profile-stats{display: flex; flex-direction: column; max-width: 33%; flex-grow: 1; align-items: center; justify-content: space-evenly;}
+.profile-stat{}
+
+.profile-equipment{display: flex; flex-direction: row; flex-grow: 1; max-width: 33%;}
+.profile-equipment-column{display: flex; flex-direction: column; background-color: white;flex-grow:1;
+    justify-content: space-evenly;align-items: center; flex-basis: 33%;}
+.profile-equipment-row{display: flex; flex-direction: row;justify-content: space-evenly;}
+.kosticka{width: 128px;height: 128px;margin: 5px;}
+.kosticka-velka{width: 256px;height: 256px; transition: 0.5s ease;}
+.kosticka-velka:hover{border-radius: 64px; transition: 0.5s ease;}
+.profile-image-obal{flex-grow: 1;justify-content: space-evenly; align-items: center; flex-direction: column; display: flex;}
+
+.profile-inventory{display: flex; flex-direction: row; flex-grow: 1; flex-wrap: wrap; max-width: 33%; justify-content: space-evenly; padding-top: 30px; overflow-y: scroll;max-height: 750px;
+    align-content: flex-start;}
+.profile-invenotory-item{width: 128px; height: 128px; flex-basis: 128px; border-radius: 24px; display: flex;
+    position: relative;margin-bottom: 24px; margin: 24px;}
+.profile-invenotory-item-img{width: 100%; border-radius: 12px;}
+.profile-invenotory-item-counter{display: inline-block;max-width: 100px;height: 18px;text-align: left; left: 6px; top: 6px;
+    position: absolute; color: gold;}
+
+.tavern{display: flex; flex-direction: row;}
+.tavern-playeritems{width: 50%; display: flex; flex-direction: row; flex-wrap: wrap;}
+.tavern-shopitems{width: 50%; display: flex; flex-direction: row; flex-wrap: wrap;}
+.tavern-itemvalue{max-width: 100px;text-align: center;color: gold;}
+.tavern-invenotory-item-img{border-radius: 12px;}
+.tavern-invenotory-item{width: 128px; height: 128px; border-radius: 24px; display: flex;
+    position: relative;margin-bottom: 24px; margin: 24px;}
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+}
+.tooltip:hover .tooltiptext {
+    transition: opacity 0.1s ease;
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip:hover .profile-invenotory-item-img {
+    transition: opacity 0.1s ease;
+    opacity: 0.25;
+}
+.tooltip:hover .tavern-invenotory-item-img {
+    transition: opacity 0.1s ease;
+    opacity: 0.25;
+}
+
+.hlavnistranka{display:flex;flex-direction: row;justify-content: space-evenly; padding: 24px;}
+.fight-tooltip .fight-tooltip-text{
+    visibility: visible;
+    width: 120px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 32px;
+
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    margin-top: 100px;
+}
+.fight-tooltip:hover .fight-tooltip-text {
+    transition: opacity 0.1s ease;
+    visibility: visible;
+    opacity: 1;
+}
+.fight-tooltip:hover .adventure-action-button {
+    transition: opacity 0.1s ease;
+    opacity: 0.25;
+}
+
+.credits{text-align: center;}
+.credits-table{width: 100%;}
+.charactercreation{
+    margin:0 auto;
+    text-align: center;}
+
+.zarovnejnasted{margin:0 auto;text-align: center;}
+
+
+
+/* combat */
+.combat-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 0.5fr 3fr;
+    grid-template-areas:
+"combat-player1 combat-text combat-player2"
+"combat-player1 combat-text combat-player2"
+"combat-player1 combat-text combat-player2";
+    text-align: center;
+}
+.combat-player1{     grid-area:combat-player1;}
+.combat-player2{     grid-area:combat-player2;}
+.combat-text{        grid-area:combat-text; overflow: scroll;}
+
+.combat-player-image{width: 300px;height: 300px;}
+.combat-player-healthbar{background-color: #FF0000;}
+
+/* PATICKA */
+.footer{
+    background-color: var(--barva1);text-align: center;color: var(--barva2);
+    display:flex;flex-direction: row;padding: 6px;justify-content: space-evenly;
+}
+
+.footer-link{ color: var(--barva3);flex-basis: 20%;text-decoration: none;padding: 6px;}
+.footer-link:hover{ color: var(--barva4);}
+
+
+/* Profile Modal */
+#profileImg:hover{
+    cursor: pointer;
+}
+.modal-profile-header{text-align: center; font-size: 32px;}
+.modal-profile-main{margin:0 auto;text-align: center; padding:24px;}
+.modal-profile-footer{}
+.modal-profile-img{padding:8px;}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #FFFFFF;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
